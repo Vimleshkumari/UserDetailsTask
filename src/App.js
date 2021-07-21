@@ -9,11 +9,9 @@ import Home from "./component/Home";
 function App() {
   return (
     <div>
-      {/* <Form/> */}
       <Router>
         <Fragment>
           <Switch>
-            {/* <Route exact path="/" component={Home}/> */}
             <Route exact path="/form" component={Form}/>
             <Route exact path="/userDetails" component={UserDetails}/>
             <Route exact path="/userDetails/:Id" component={UserId}></Route>
