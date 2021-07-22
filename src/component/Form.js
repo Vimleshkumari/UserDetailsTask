@@ -21,7 +21,7 @@ class Form extends Component {
         button: false
       },
       successMessage: '',
-      successLogin: false
+      
     }
   }
 
@@ -83,17 +83,16 @@ class Form extends Component {
     const obj = { name: this.state.form.name, email: this.state.form.email, password: this.state.form.password };
     this.setState({ successMessage: "Form submitted successfully" })
     // data can be seen in console open inspect=>console
-    console.log(obj)
+    alert(`Form is sbmitted successfully`)
+    console.log("FormData: ", obj)
 
   }
 
 
   render() {
-    const { form, formValid, formError, successLogin } = this.state;
+    const { form, formValid, formError } = this.state;
     formValid.button = formValid.name && formValid.email && formValid.password
-    if (successLogin) {
-      {console.log(form)}
-    }
+    
     return (
       <div className="row" style={{paddingTop:"10%",paddingBottom:"20%"}}>
         <div className="col-md-4 offset-4">
